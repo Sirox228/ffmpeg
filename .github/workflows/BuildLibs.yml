@@ -69,7 +69,7 @@ jobs:
           
       - name: Build
         run: |
-          ./build_android.sh
+          ./build_android64.sh
 
       - uses: actions/upload-artifact@v2
         with:
