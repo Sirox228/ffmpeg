@@ -1,13 +1,13 @@
-# Compiles FFmpeg for Android using Linux and the androidndk (r23c)
+# Compiles FFmpeg for Android using Linux and the androidndk and llvm
 
-# Here we set the android ndk (r23c) llvm toolchain path.
+# Here we set the android ndk llvm toolchain path.
 # You need to choose the folder with your host arch
 # And copy the path and paste it inside NDKDIR
 NDKDIR="/home/runner/work/android-ndk-r21e/toolchains/llvm/prebuilt/linux-x86_64"
 
 API="21"
 NDK_RANLIB="$NDKDIR/bin/llvm-ranlib"
-NDK_CC="$NDKDIR/bin/86_64-linux-android$API-clang"
+NDK_CC="$NDKDIR/bin/x86_64-linux-android$API-clang"
 NDK_CXX="$NDKDIR/bin/x86_64-linux-android$API-clang++"
 NDK_STRIP="$NDKDIR/bin/llvm-strip"
 NDK_NM="$NDKDIR/bin/llvm-nm"
