@@ -36,6 +36,7 @@ FLAGS="$FLAGS --enable-cross-compile"
 FLAGS="$FLAGS --target-os=android"
 FLAGS="$FLAGS --arch=x86"
 FLAGS="$FLAGS --cross-prefix=i686-linux-android-"
+FLAGS="$FLAGS --disable-asm" # sorry, this just dosent work
 FLAGS="$FLAGS --as="$NDK_AS""
 FLAGS="$FLAGS --cc="$NDK_CC""
 FLAGS="$FLAGS --cxx"$NDK_CX""
