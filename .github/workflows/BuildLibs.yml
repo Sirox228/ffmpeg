@@ -34,12 +34,12 @@ jobs:
           
       - name: Build
         run: |
-          ./build_android.sh
+          ./build_android32.sh
           
       - uses: actions/upload-artifact@v2
         with:
           name: ffmpeg-Arm
-          path: android
+          path: android32
 
   buildArm64:
     # The type of runner that the job will run on
@@ -74,7 +74,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: ffmpeg-Aarch64
-          path: android
+          path: android64
 
   # This workflow contains a single job called "build"
   buildx86:
@@ -105,12 +105,12 @@ jobs:
           
       - name: Build
         run: |
-          ./build_android.sh
+          ./build_androidx86.sh
           
       - uses: actions/upload-artifact@v2
         with:
           name: ffmpeg-x86
-          path: android
+          path: androidx86
 
   # This workflow contains a single job called "build"
   buildx86_64:
@@ -141,9 +141,9 @@ jobs:
           
       - name: Build
         run: |
-          ./build_android.sh
+          ./build_androidx86_64.sh
           
       - uses: actions/upload-artifact@v2
         with:
           name: ffmpeg-x86_64
-          path: android
+          path: androidx86_64
