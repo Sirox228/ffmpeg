@@ -7,15 +7,15 @@ NDKDIR="/home/runner/work/android-ndk-r21e/toolchains/llvm/prebuilt/linux-x86_64
 
 API="21"
 NDK_RANLIB="$NDKDIR/bin/llvm-ranlib"
-NDK_CC="$NDKDIR/bin/x86_64$API-clang"
-NDK_CXX="$NDKDIR/bin/x86_64$API-clang++"
+NDK_CC="$NDKDIR/bin/86_64-linux-android$API-clang"
+NDK_CXX="$NDKDIR/bin/x86_64-linux-android$API-clang++"
 NDK_STRIP="$NDKDIR/bin/llvm-strip"
 NDK_NM="$NDKDIR/bin/llvm-nm"
 NDK_SYSROOT="$NDKDIR/sysroot"
 
 # No this isnt a mistake lol this was done because 
 # llvm-as froze configure for some reason
-NDK_AS="$NDKDIR/bin/aarch64-linux-android$API-clang"
+NDK_AS="$NDKDIR/bin/x86_64-linux-android$API-clang"
 
 NDK_AR="$NDKDIR/bin/llvm-ar"
 
@@ -36,8 +36,8 @@ FLAGS="$FLAGS --enable-version3"
 FLAGS="$FLAGS --enable-cross-compile"
 FLAGS="$FLAGS --target-os=android"
 FLAGS="$FLAGS --arch=x86_64"
-FLAGS="$FLAGS --cpu=x86_64"
-FLAGS="$FLAGS --cross-prefix=x86_64-"
+FLAGS="$FLAGS --cross-prefix=x86_64-linux-android-"
+FLAGS="$FLAGS --disable-asm" # i will enable yasm or nasm soon for asm
 FLAGS="$FLAGS --as="$NDK_AS""
 FLAGS="$FLAGS --cc="$NDK_CC""
 FLAGS="$FLAGS --cxx"$NDK_CX""
@@ -55,7 +55,7 @@ pushd ffmpeg
 popd
 
 # Export the necessary binaries.
-OUTPUT_DIR=androidx86_64
+OUTPUT_DIR=androidx64
 mkdir -p $OUTPUT_DIR
 cp -f ffmpeg/libavcodec/libavcodec.so $OUTPUT_DIR/libavcodec.so
 cp -f ffmpeg/libavdevice/libavdevice.so $OUTPUT_DIR/libavdevice.so
