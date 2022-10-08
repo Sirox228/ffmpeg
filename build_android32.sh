@@ -7,15 +7,15 @@ NDKDIR="/home/runner/work/android-ndk-r21e/toolchains/llvm/prebuilt/linux-x86_64
 
 API="21"
 NDK_RANLIB="$NDKDIR/bin/llvm-ranlib"
-NDK_CC="$NDKDIR/bin/armv7a-linux-android$API-clang"
-NDK_CXX="$NDKDIR/bin/armv7a-linux-android$API-clang++"
+NDK_CC="$NDKDIR/bin/armv7a-linux-androideabi$API-clang"
+NDK_CXX="$NDKDIR/bin/armv7a-linux-androideabi$API-clang++"
 NDK_STRIP="$NDKDIR/bin/llvm-strip"
 NDK_NM="$NDKDIR/bin/llvm-nm"
 NDK_SYSROOT="$NDKDIR/sysroot"
 
 # No this isnt a mistake lol this was done because 
 # llvm-as froze configure for some reason
-NDK_AS="$NDKDIR/bin/armv7a-linux-android$API-clang"
+NDK_AS="$NDKDIR/bin/armv7a-linux-androideabi$API-clang"
 
 NDK_AR="$NDKDIR/bin/llvm-ar"
 
