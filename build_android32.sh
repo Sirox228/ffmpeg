@@ -40,6 +40,7 @@ FLAGS="$FLAGS --cross-prefix=arm-linux-android-"
 FLAGS="$FLAGS --as="$NDK_AS""
 FLAGS="$FLAGS --cc="$NDK_CC""
 FLAGS="$FLAGS --cxx"$NDK_CX""
+FLAGS="$FLAGS --enable-neon" #disable if issues are found
 FLAGS="$FLAGS --sysroot="$NDK_SYSROOT""
 FLAGS="$FLAGS --strip="$NDK_STRIP""
 FLAGS="$FLAGS --cross-prefix="$NDKDIR""
