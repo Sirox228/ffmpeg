@@ -35,7 +35,6 @@ FLAGS="$FLAGS --enable-version3"
 # Android-specific flags.
 FLAGS="$FLAGS --enable-cross-compile"
 FLAGS="$FLAGS --target-os=android"
-# (sirox) gonna make this shit for arm-v7 too
 FLAGS="$FLAGS --arch=arm64"
 FLAGS="$FLAGS --cpu=armv8-a"
 FLAGS="$FLAGS --cross-prefix=aarch64-linux-gnu-"
