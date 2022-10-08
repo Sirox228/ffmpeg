@@ -37,7 +37,7 @@ FLAGS="$FLAGS --enable-cross-compile"
 FLAGS="$FLAGS --target-os=android"
 FLAGS="$FLAGS --arch=x86_64"
 FLAGS="$FLAGS --cross-prefix=x86_64-linux-android-"
- # i will enable yasm or nasm soon for asm
+FLAGS="$FLAGS --disable-asm" # i will enable yasm or nasm soon for asm
 FLAGS="$FLAGS --as="$NDK_AS""
 FLAGS="$FLAGS --cc="$NDK_CC""
 FLAGS="$FLAGS --cxx"$NDK_CX""
